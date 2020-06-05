@@ -1,0 +1,19 @@
+<div class="page-header">​
+    <h1>VoteMe....</h1>​
+  </div>
+  
+<div>
+    <div class="well well-lg">​
+        <strong>Question:</strong>{{Question.Question}}​
+      </div>​
+    <div *ngFor="let choice of ListOfChoices">
+        <label>​
+            <input type="radio" name="choice" (click)="vote(choice)">​
+           
+          </label>​        
+        <button type="button"  >{{choice.Choice}}</button>  <em>{{choice.Votes}} </em>
+        
+    </div>
+    <p><em>{{Question.Voted}} votes counted so far.  </em></p>​
+    <!-- ​<p><em>{{choice.Votes}} votes counted so far.  </em></p>​ -->
+</div>
